@@ -1,0 +1,24 @@
+{
+    "name":"Doxy",
+    "version":"1.0",
+    "manifest_version":2,
+    "description":"Save Your time :)",
+    "browser_action":{
+        "default_icon":"ico.png",
+        "default_popup":"mypopup.html"
+        
+    },
+    "background": {
+        "persistent": false,
+        "scripts": ["bck.js"]
+      },
+    "permissions": ["tabs"],
+    "content_scripts": [{
+        "css": ["st.css"],
+        "js": ["content.js"],
+        "matches": [
+            "<all_urls>"
+        ]
+    }]
+
+}
